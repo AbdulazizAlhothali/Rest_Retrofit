@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/tvFlickr"
-        android:layout_width="199dp"
-        android:layout_height="58dp"
+        android:layout_width="84dp"
+        android:layout_height="46dp"
         android:layout_marginStart="32dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/ivFlickr"
@@ -28,5 +28,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivFlickr"
         app:layout_constraintTop_toTopOf="@+id/ivFlickr"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.258" />
 </androidx.constraintlayout.widget.ConstraintLayout>

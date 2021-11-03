@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.tuwaiq.restandretrofit.R
 import com.tuwaiq.restandretrofit.data.network.models.FlickrListPhotos
 import com.tuwaiq.restandretrofit.data.network.models.FlickrPhoto
@@ -19,6 +20,8 @@ class FlickAdapter(val photosData: List<FlickrPhoto>) : RecyclerView.Adapter<Cus
     override fun onBindViewHolder(holder: CustomHolder, position: Int) {
         val photo= photosData[position]
         holder.titleTV.text = photo.title
+        holder.imageIV.load(photo.url)
+
     }
 
     override fun getItemCount(): Int {
