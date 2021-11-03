@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         val vm = ViewModelProvider(this).get(MainVM::class.java)
         vm.fetchInterestingList().observe(this, {
-            flickrRV.adapter= FlickAdapter(it.photos)
+            flickrRV.adapter= FlickAdapter(it.photos.photo)
             Log.d("Flicker main Response", it.photos.toString())
         })
 
