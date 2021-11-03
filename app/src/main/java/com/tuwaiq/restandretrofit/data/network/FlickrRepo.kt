@@ -13,7 +13,7 @@ import retrofit2.Response
 
 
 class FlickrRepo {
-    private val tag = "FlickrRepo"
+
     private val api = FlickerBuilder.flickrAPI
 
     suspend fun fetchInterestingList():FlickrData= withContext(Dispatchers.IO){
