@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.tuwaiq.restandretrofit.R
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         flickrRV= findViewById(R.id.rvFlickr)
-        flickrRV.layoutManager = GridLayoutManager(this, 2)
+        flickrRV.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)    //GridLayoutManager(this, 2)
 
         val vm = ViewModelProvider(this).get(MainVM::class.java)
         vm.fetchInterestingList().observe(this, {
