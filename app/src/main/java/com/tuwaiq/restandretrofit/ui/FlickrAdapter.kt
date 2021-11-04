@@ -11,7 +11,7 @@ import com.tuwaiq.restandretrofit.R
 import com.tuwaiq.restandretrofit.data.network.models.FlickrListPhotos
 import com.tuwaiq.restandretrofit.data.network.models.FlickrPhoto
 
-class FlickAdapter(val photosData: List<FlickrPhoto>) : RecyclerView.Adapter<CustomHolder>() {
+class FlickrAdapter(val photosData: List<FlickrPhoto>) : RecyclerView.Adapter<CustomHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.flickr_recycleview_item,parent, false)
         return CustomHolder(view)
